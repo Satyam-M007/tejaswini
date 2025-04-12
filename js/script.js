@@ -16,7 +16,7 @@ function updateCountdown() {
     const difference = birthdayDate - currentDate;
 
     // Check if the current date is April 16
-    const isBirthday = currentDate.getDate() === 16 && currentDate.getMonth() === 4; // April is month 3
+    const isBirthday = currentDate.getDate() === 16 && currentDate.getMonth() === 3; // April is month 3
 
     if (isBirthday) {
         // Show birthday message
