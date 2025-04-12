@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Tejaswini!</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float 15s linear infinite;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-black min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Particles container -->
+    <div id="particles-container" class="fixed inset-0 pointer-events-none"></div>
+
+    <!-- Hearts container -->
+    <div id="hearts-container" class="fixed inset-0 pointer-events-none"></div>
+
+    <!-- Main content -->
+    <div class="relative z-10 text-center p-4">
+        <div class="typing-container mb-8">
+            <h1 class="happy-birthday text-6xl md:text-8xl mb-4 font-['Orbitron'] tracking-wider">
+                Happy Birthday
+            </h1>
+            <div class="name text-7xl md:text-9xl font-bold mb-6 font-['Orbitron'] neon-text-magenta">
+                TEJASWINI
+            </div>
+            <div class="details text-xl md:text-2xl font-['Quicksand'] text-cyan-400 mb-12">
+                Most Beautiful Girl • Queen
+            </div>
+            <div class="sender hidden text-2xl md:text-3xl font-['Quicksand'] neon-text-yellow mt-8">
+                - With love, Satyam Mishra
+            </div>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="countdown-container grid grid-cols-3 gap-4 md:gap-8 mb-12 max-w-3xl mx-auto">
+            <div class="time-segment">
+                <div class="value font-['Orbitron'] text-4xl md:text-7xl neon-text-cyan" id="hours">00</div>
+                <div class="label font-['Quicksand'] text-gray-400 mt-2">Hours</div>
+            </div>
+            <div class="time-segment">
+                <div class="value font-['Orbitron'] text-4xl md:text-7xl neon-text-magenta" id="minutes">00</div>
+                <div class="label font-['Quicksand'] text-gray-400 mt-2">Minutes</div>
+            </div>
+            <div class="time-segment">
+                <div class="value font-['Orbitron'] text-4xl md:text-7xl neon-text-yellow" id="seconds">00</div>
+                <div class="label font-['Quicksand'] text-gray-400 mt-2">Seconds</div>
+            </div>
+        </div>
+
+        <!-- Music Player -->
+        <div class="music-container">
+            <iframe id="musicPlayer" 
+                    width="300" 
+                    height="80" 
+                    src="https://www.youtube.com/embed/nl62hhiBMOM?controls=1&autoplay=0" 
+                    title="Birthday Song"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    class="mx-auto mb-4 rounded-lg opacity-70 hover:opacity-100 transition-opacity">
+            </iframe>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
